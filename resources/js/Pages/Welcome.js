@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, Head } from "@inertiajs/inertia-react";
-import { motion } from "framer-motion";
 import { FadeIn, SlideDown, SlideUp } from "@/animations";
 
 export default function Welcome(props) {
@@ -8,36 +7,36 @@ export default function Welcome(props) {
         <>
             <Head title="Welcome" />
             <div className="relative flex items-top justify-center min-h-screen bg-gray-100  sm:items-center sm:pt-0">
-                <motion.div
+                <div
                     variants={SlideUp}
                     initial="hidden"
                     animate="show"
                     className="max-w-6xl mx-auto sm:px-6 lg:px-8"
                 >
-                    <motion.div
+                    <div
                         variants={SlideDown}
                         initial="hidden"
                         animate="show"
                         className="text-center"
                     >
-                        <motion.h2
+                        <img className="h-52 w-52 mx-auto mb-4" src="./images/logo.png"></img>
+                        <h2
                             variants={SlideDown}
                             initial="hidden"
                             animate="show"
-                            className="text-3xl leading-9 font-extrabold font-tajawal-bold tracking-tight  sm:text-4xl sm:leading-10"
+                            className="text-2xl leading-9 font-extrabold font-tajawal-bold tracking-tight  sm:text-4xl sm:leading-10"
                         >
-                            مرحباً بك في نظام التسجيل الالكتروني
-                        </motion.h2>
-                        <motion.p
+                            مرحبا بك في نظام التسجيل الخاص بكلية شط العرب الجامعة
+                        </h2>
+                        <p
                             variants={SlideDown}
                             initial="hidden"
                             animate="show"
-                            className="mt-3 mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl lg:mx-0 lg:text-2xl xl:text-3xl"
+                            className="mt-3 mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl lg:mx-0 lg:text-2xl xl:text-xl"
                         >
-                            يمكنك الآن تسجيل حساب جديد للدخول إلى نظام التسجيل
-                            الالكتروني
-                        </motion.p>
-                    </motion.div>
+                            يمكنك تسجيل الدخول الى النظام او انشاء حساب جديد
+                        </p>
+                    </div>
                     <div className="mt-5 mx-auto sm:flex gap-10 sm:justify-center lg:mx-0">
                         <Link
                             className="mt-3
@@ -69,7 +68,7 @@ export default function Welcome(props) {
                             تسجيل دخول
                         </Link>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </>
     );

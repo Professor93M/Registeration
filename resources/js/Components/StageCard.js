@@ -1,6 +1,5 @@
 import { Down, Up } from "@/animations";
 import { Link } from "@inertiajs/inertia-react";
-import { motion } from "framer-motion";
 import React, { useEffect } from "react";
 
 const StageCard = ({ title, description, active, className, link, icon }) => {
@@ -25,7 +24,7 @@ const StageCard = ({ title, description, active, className, link, icon }) => {
                     : "opacity-0"
             } `}
         >
-            <motion.div
+            <div
                 className={`
             front absolute h-full border-none  flex  gap-y-4 flex-col overflow-hidden w-full justify-center items-center top-0 left-0 duration-500 z-10   group-hover:-translate-y-48
             ${
@@ -35,24 +34,24 @@ const StageCard = ({ title, description, active, className, link, icon }) => {
             } 
            `}
             >
-                <motion.p
+                <p
                     variants={Down}
                     initial="hidden"
                     animate="show"
                     className="mt-4  text-lg leading-relaxed text-gray-600"
                 >
                     {icon}
-                </motion.p>
-                <motion.h1
+                </p>
+                <h1
                     variants={Up}
                     initial="hidden"
                     animate="show"
                     className="text-3xl  font-bold leading-tight text-gray-900"
                 >
                     {title}
-                </motion.h1>
-            </motion.div>
-            <motion.div
+                </h1>
+            </div>
+            <div
                 className={`back  front absolute w-full h-full  flex items-center justify-center border-none bottom-0 left-0 ${
                     active
                         ? className
@@ -62,7 +61,7 @@ const StageCard = ({ title, description, active, className, link, icon }) => {
                 <p className="mt-4 opacity-0 group-hover:opacity-100 duration-700 delay-300  text-lg leading-relaxed text-gray-600">
                     {description}
                 </p>
-            </motion.div>
+            </div>
         </Link>
     );
 };

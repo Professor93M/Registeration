@@ -1,10 +1,9 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { SlideUp } from "@/animations";
 
 export default function Label({ forInput, value, className, children }) {
     return (
-        <motion.label
+        <label
             htmlFor={forInput}
             className={`block font-medium text-sm text-gray-700 ` + className}
             variants={SlideUp}
@@ -12,6 +11,6 @@ export default function Label({ forInput, value, className, children }) {
             initial="hidden"
         >
             {value ? value : children}
-        </motion.label>
+        </label>
     );
 }

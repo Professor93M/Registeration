@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { SlideUp, Container, FadeIn } from "@/animations";
 import Label from "./Label";
 
@@ -13,7 +12,7 @@ export default function Button({
     label,
 }) {
     return (
-        <motion.div
+        <div
             className="flex flex-col items-center justify-center"
             variants={Container}
             initial="hidden"
@@ -24,7 +23,7 @@ export default function Button({
                 value={label}
                 className="w-full text-right mb-2"
             />
-            <motion.select
+            <select
                 variants={FadeIn}
                 initial="hidden"
                 disabled={disabled}
@@ -36,7 +35,7 @@ export default function Button({
             >
                 {/* {add && <option value="0"> {defaultValue}</option>} */}
                 {options.map((option, index) => (
-                    <motion.option
+                    <option
                         variants={SlideUp}
                         initial="hidden"
                         animate="show"
@@ -45,9 +44,9 @@ export default function Button({
                         label={option.name}
                     >
                         {option.name}
-                    </motion.option>
+                    </option>
                 ))}
-            </motion.select>
-        </motion.div>
+            </select>
+        </div>
     );
 }

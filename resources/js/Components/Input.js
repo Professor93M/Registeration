@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { FadeIn } from "@/animations";
-import { motion } from "framer-motion";
 
 export default function Input({
     type = "text",
@@ -21,7 +20,7 @@ export default function Input({
     }, []);
 
     return (
-        <motion.input
+        <input
             ref={input}
             disabled={disabled}
             variants={FadeIn}

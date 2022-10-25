@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { Container, FadeIn, SlideUp } from "@/animations";
 import Input from "./Input";
 import Label from "./Label";
@@ -20,7 +19,7 @@ const FormItem = ({
     error,
 }) => {
     return (
-        <motion.div
+        <div
             variants={Container}
             initial="hidden"
             animate="show"
@@ -47,7 +46,7 @@ const FormItem = ({
                 />
             )}
             <small className="text-red-500 text-sm">{error}</small>
-        </motion.div>
+        </div>
     );
 };
 
