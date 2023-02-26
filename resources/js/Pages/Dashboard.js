@@ -1,7 +1,7 @@
 import Authenticated from "@/Layouts/Authenticated";
 import { Head } from "@inertiajs/inertia-react";
 import StageCard from "@/Components/StageCard";
-import { FcAbout, FcApproval, FcDepartment, FcReadingEbook } from "react-icons/fc";
+import { FcAbout, FcApproval, FcDepartment, FcReadingEbook, FcEditImage, FcApprove, FcGraduationCap } from "react-icons/fc";
 import { MdOutlineContactPage } from "react-icons/md";
 
 export default function Dashboard() {
@@ -32,6 +32,33 @@ export default function Dashboard() {
             className: "bg-green-300 border-b border-gray-200",
             duration: "1000",
             icon: <FcReadingEbook className="w-12 h-12" />,
+        },
+        {
+            title: "آلية تسجيل الطلبة",
+            description: "تسري الضوابط المنصوص عليها في هذا الفقرة على قنوات القبول كافة",
+            link: "/stage4",
+            active: true,
+            className: "bg-green-300 border-b border-gray-200",
+            duration: "1000",
+            icon: <FcEditImage className="w-12 h-12" />,
+        },
+        {
+            title: "التقديم على الجامعة الامريكية",
+            description: "آلية وضوابط تقديم وقبول الطلبة على الجامعة الامريكية",
+            link: "/stage5",
+            active: true,
+            className: "bg-green-300 border-b border-gray-200",
+            duration: "1000",
+            icon: <FcGraduationCap className="w-12 h-12" />,
+        },
+        {
+            title: "المنحة المجانية للقبول في المجموعة الطبية",
+            description: "آلية وضـوابط تقديم وقبول الطلبة على المنحة المجانية للقبول في المجموعة الطبية (طب عام، طب أسنان، صيدلة)",
+            link: "/stage6",
+            active: true,
+            className: "bg-green-300 border-b border-gray-200",
+            duration: "1000",
+            icon: <FcApprove className="w-12 h-12" />,
         },
     ];
     return (

@@ -14,7 +14,7 @@ const StageCard = ({ title, description, active, className, link, icon }) => {
     return (
         <Link
             href={link}
-            className={` group relative overflow-hidden h-2/4 ${
+            className={` group relative overflow-hidden ${
                 active
                     ? className
                     : "pointer-events-none  text-gray-400 rounded-lg"

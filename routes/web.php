@@ -12,4 +12,16 @@ Route::get('stage3', function () {
     return Inertia::render('Stage3');
 })->name('stage3');
 
+Route::get('stage4', function () {
+    return Inertia::render('Stage4');
+})->name('stage4');
+
+Route::get('stage5', function () {
+    return Inertia::render('Stage5');
+})->name('stage5');
+
+Route::get('stage6', function () {
+    return Inertia::render('Stage6');
+})->name('stage6');
+
 require __DIR__.'/auth.php';
